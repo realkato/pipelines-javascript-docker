@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: realkatopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realkatopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: realkatopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: realkatopipelinesjavascriptdocker 
+          image: user23acr2.azurecr.io/realkatopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
